@@ -9,7 +9,7 @@
 
 2. Inspect the repo structure and make sure requirements.txt exists.
 
-![](Pasted image 20251117112449.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117112449.png)
 
 ## Task 2: Run the app locally
 1. Create a virtualenv, install requirements, and confirm the app runs:
