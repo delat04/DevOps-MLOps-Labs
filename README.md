@@ -5,7 +5,7 @@
 ## Task 1: Prepare the ML Project
 1. Fork the repository (or download the ZIP and create a repo).
 
-![](Pasted image 20251117112218.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117112218.png)
 
 2. Inspect the repo structure and make sure requirements.txt exists.
 
@@ -14,11 +14,11 @@
 ## Task 2: Run the app locally
 1. Create a virtualenv, install requirements, and confirm the app runs:
 
-![](Pasted image 20251117113157.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117113157.png)
 
-![](Pasted image 20251117150911.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117150911.png)
 
-![](Pasted image 20251117152733.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117152733.png)
 
 ## Task 3: Write unit tests
 
@@ -33,7 +33,7 @@ session2/ml-app/tests/
 └── test_train.py
 ```
 
-![](Pasted image 20251117153810.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117153810.png)
 
 ### **Data Loader Tests** (`test_data_loader.py`)
 **Purpose:** Validate data loading and preprocessing functionality
@@ -55,11 +55,11 @@ def test_load_data():
     assert isinstance(X, np.ndarray)
 ```
 
-![](Pasted image 20251117153352.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117153352.png)
 
 ### **Prediction Tests** (`test_predict.py`)
 
-![](Pasted image 20251117153115.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117153115.png)
 
 ### **Training Pipeline Tests** (`test_train.py`)
 **Purpose:** Validate end-to-end training workflow
@@ -72,7 +72,7 @@ def test_load_data():
 - ✅ **Error Handling:** Tests graceful failure on invalid data
 - ✅ **Logging Output:** Validates training logs and metrics
 
-![](Pasted image 20251117153729.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117153729.png)
 
 ---
 
@@ -83,7 +83,7 @@ def test_load_data():
 
 2. Ensure flake8 runs and the code meets basic style checks.
 
-![](Pasted image 20251117155109.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117155109.png)
 
 ---
 
@@ -157,13 +157,13 @@ def test_load_data():
 - Built Docker image and saved as tar artifact
 - Jobs run sequentially (Docker only builds after tests pass)
 
-![](Pasted image 20251117160211.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117160211.png)
 
-![](Pasted image 20251117160245.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117160245.png)
 
-![](Pasted image 20251117155722.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117155722.png)
 
-![](Pasted image 20251117160331.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117160331.png)
 
 ---
 
@@ -203,13 +203,13 @@ docker run --rm -v $(pwd)/models:/app/models iris-classifier:latest python src/p
 docker run --rm iris-classifier:latest pytest tests/ -v
 ```
 
-![](Pasted image 20251117160716.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117160716.png)
 
-![](Pasted image 20251117161712.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117161712.png)
 
-![](Pasted image 20251117161514.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117161514.png)
 
-![](Pasted image 20251117161601.png)
+![](https://github.com/delat04/DevOps-MLOps-Labs/blob/main/Pasted%20image%2020251117161601.png)
 
 ---
 
@@ -236,7 +236,7 @@ docker run --rm iris-classifier:latest pytest tests/ -v
 ## Final Deliverables for tasks 5 and 6
 
 ### 1. **CI Workflow** (`.github/workflows/ci.yml`)
-✅ Runs on push and pull requests
+- ✅ Runs on push and pull requests
 - ✅ Checks out code
 - ✅ Sets up Python 3.10 with caching
 - ✅ Installs dependencies
