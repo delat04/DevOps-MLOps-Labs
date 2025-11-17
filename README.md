@@ -1,6 +1,5 @@
 # DevOps-MLOps-Labs Documentation
 
-## link to my github forked repo: https://github.com/delat04/DevOps-MLOps-Labs
 
 ## Task 1: Prepare the ML Project
 1. Fork the repository (or download the ZIP and create a repo).
