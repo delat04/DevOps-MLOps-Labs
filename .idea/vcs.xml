@@ -3,6 +3,5 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/formation-mlops" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/session 3/classification-pytorch-main" vcs="Git" />
   </component>
 </project>

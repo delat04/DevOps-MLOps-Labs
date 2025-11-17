@@ -4,8 +4,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
 import pytest
 import numpy as np
-from src.data_loader import load_iris_data
-from src.model import IrisClassifier
+from model import IrisClassifier
+from data_loader import load_iris_data
 
 class TestIrisClassifier:
     def setup_method(self):

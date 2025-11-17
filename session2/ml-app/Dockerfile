@@ -1,21 +1,34 @@
 # Use official Python runtime as base image
-FROM python:3.9-slim
+FROM python:3.10-slim
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /app
 
-# Copy requirements
+# Install system dependencies if needed
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first for better caching
 COPY requirements.txt .
 
-# Install dependencies
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+# Install Python dependencies
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
-# Copy all application code to container
-COPY . .
+# Copy application code
+COPY src/ ./src/
+COPY tests/ ./tests/
 
-# Create models directory for storing trained models
-RUN mkdir -p models
+# Create necessary directories
+RUN mkdir -p models plots
 
-# Run Training
+# Set Python path
+ENV PYTHONPATH=/app/src
+
+# Expose port for future API/web server (optional)
+EXPOSE 8000
+
+# Default command: train the model
 CMD ["python", "src/train.py"]
